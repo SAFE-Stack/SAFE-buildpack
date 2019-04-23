@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 # bin/detect <build-dir>
 
-if [ -n "$(find $1 -maxdepth 5 -iname Startup.cs)" ]; then
-  echo "ASP.NET Core" && exit 0
-elif [ -n "$(find $1 -maxdepth 5 -iname Program.cs)" ]; then
-  echo "Core .NET" && exit 0
+if [ -n "$(find $1 -maxdepth 5 -iname build.fsx)" ]; then
+  echo "FAKE build" && exit 0
 else
   echo "no" && exit 1
 fi
