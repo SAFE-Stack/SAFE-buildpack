@@ -45,9 +45,6 @@ dotnet tool install fake-cli -g
 echo "Installing paket"
 dotnet tool install paket -g
 
-export PATH="$PATH:/app/.dotnet/tools"
-
-
 cd $BUILD_DIR
 
 paket install
