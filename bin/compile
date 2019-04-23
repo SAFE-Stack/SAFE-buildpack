@@ -38,6 +38,7 @@ install_dotnet $BUILD_DIR $CACHE_DIR $DOTNET_SDK_VERSION $DOTNET_RUNTIME_VERSION
 
 export PATH="${BUILD_DIR}/.heroku/dotnet:${HOME}/.dotnet/tools:${PATH}"
 export DOTNET_ROOT="${BUILD_DIR}/.heroku/dotnet"
+echo "DOTNET_ROOT set to $DOTNET_ROOT"
 
 echo "Installing fake"
 dotnet tool install fake-cli -g
